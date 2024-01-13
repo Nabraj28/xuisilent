@@ -1,0 +1,32 @@
+{
+  "name": "xuisilent",
+  "version": "0.0.2",
+  "description": "A personal ui package",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "url": "https://github.com/Nabraj28/xuisilent"
+  },
+  "scripts": {
+    "dev": "rollup -c --watch",
+    "build": "rollup -c"
+  },
+  "keywords": [],
+  "author": "Nabraj Poudel",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.9.5",
+    "rollup-plugin-dts": "^6.1.0"
+  },
+  "dependencies": {
+    "rollup-plugin-postcss": "^4.0.2",
+    "tslib": "^2.6.2"
+  }
+}
