@@ -12,13 +12,17 @@ npm i xuisilent
 ## Usage
 
 ```bash
-import { Button } from 'xuisilent'
+import { Button,Input,Label } from 'xuisilent'
 
 const App = ()=>{
     
-    <div>
-            <Button bgColor="primary" font="md" >
-             Submit
+    <div>   
+            <Label>Username:</Label>
+            <Input placeholder="Enter username" border="gray" />
+            <Label>Password:</Label>
+            <Input placeholder="Enter password" border="gray" />
+            <Button bgColor="primary" >
+             Login
             </Button>
     </div>
 }

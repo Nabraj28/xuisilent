@@ -8,53 +8,10 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
     variant?: 'primary-border' | 'secondary-border' | 'gray-border' | 'gold-border' | 'bronze-border' | 'brown-border' | 'yellow-border' | 'amber-border' | 'orange-border' | 'tomato-border' |
     'red-border' | 'ruby-border' | 'crimson-border' | 'pink-border' | 'plum-border' | 'purple-border' | 'violet-border' | 'iris-border' | 'indigo-border' | 'blue-border' | 'cyan-border' | 'teal-border' | 'jade-border' |
     'green-border' | 'grass-border' | 'lime-border' | 'mint-border' | 'sky-border';
-    rounded?: 'small' | 'large' | 'full';
-    font?: 'sm' | 'md' | 'lg'
 }
 
-export const Button: React.FC<ButtonProps> = ({ bgColor, rounded, variant, font, ...props }) => {
+export const Button: React.FC<ButtonProps> = ({ bgColor, variant, ...props }) => {
 
-    const sizeClass = () => {
-        if (font === 'sm') {
-            return {
-                fontSize: '12px',
-
-            }
-        };
-        if (font === 'md') {
-            return {
-                fontSize: '16px',
-            }
-        };
-        if (font === 'lg') {
-            return {
-                fontSize: '20px',
-
-            }
-        };
-        return {
-
-        }
-
-    };
-    const roundedClass = () => {
-        if (rounded === 'small') {
-            return {
-                borderRadius: '5px'
-            }
-        };
-        if (rounded === 'large') {
-            return {
-                borderRadius: '10px'
-            }
-        };
-        if (rounded === 'full') {
-            return {
-                borderRadius: '25px'
-            }
-        }; return { borderRadius: '10px' }
-
-    };
     const colorClasses = () => {
         if (bgColor === 'primary') {
             return {
@@ -373,8 +330,7 @@ export const Button: React.FC<ButtonProps> = ({ bgColor, rounded, variant, font,
         }
     };
     return (
-        <button style={{ ...colorClasses(), ...variantClasses(), ...sizeClass(), ...roundedClass(), ...props.style }} {...props} >
-
+        <button style={{ ...colorClasses(), ...variantClasses(), ...props.style }} {...props} >
             {props.children}
 
         </button>
